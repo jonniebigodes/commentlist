@@ -1,5 +1,6 @@
-import PropTypes from "prop-types";
+import React from "react";
 
+import PropTypes from "prop-types";
 import styled, { createGlobalStyle } from "styled-components";
 
 const CommentListDiv = styled.div`
@@ -23,6 +24,8 @@ const CommentItemDiv = styled.div`
     rgba(250, 250, 250, 0.95)
   );
   border-radius: 48px;
+  border: 4px solid red;
+  font-weight: bold;
 `;
 
 const AvatarDiv = styled.div`
@@ -55,12 +58,11 @@ const MessageDiv = styled.div`
 const AuthorSpan = styled.span`
   font-weight: bold;
 `;
-
 const TextSpan = styled.span``;
 
 const GlobalStyle = createGlobalStyle`
-   @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,800');
- `;
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,800');
+`;
 
 export default function CommentList({ loading, comments, totalCount }) {
   if (loading) {
